@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "cf73e2b2-9211-46ad-b7fa-96a4fb76f09e",
+		"name": "ultimo_esercizio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43160357"
+	},
+	"item": [
+		{
+			"name": "tutti gli items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9005/lost_items",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9005",
+					"path": [
+						"lost_items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "solo smarriti",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9005/lost_items/not_found",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9005",
+					"path": [
+						"lost_items",
+						"not_found"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "trovati",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9005/lost_items/found",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9005",
+					"path": [
+						"lost_items",
+						"found"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inserisci",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"gagga\",\r\n  \"description\": \"cffff di elefante\",\r\n  \"lostDate\": \"2333-09-10\",\r\n  \"location\": \"ffff\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9005/lost_items/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9005",
+					"path": [
+						"lost_items",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modifica",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"found\": true,\r\n  \"found_location\": \"Sassari\",\r\n  \"found_date\": \"2026-05-01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9005/lost_items/update/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9005",
+					"path": [
+						"lost_items",
+						"update",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "elimina",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9005/lost_items/delete/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9005",
+					"path": [
+						"lost_items",
+						"delete",
+						"5"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
